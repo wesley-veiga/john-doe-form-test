@@ -8,6 +8,40 @@ import {
 
 export const clientsRouter = Router();
 
+/**
+ * @openapi
+ * /clients:
+ *   post:
+ *     summary: Cadastrar novo cliente
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/ClientInput'
+ *     responses:
+ *       201:
+ *         description: Cliente cadastrado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   $ref: '#/components/schemas/Client'
+ *       400:
+ *         description: Dados inválidos
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ValidationError'
+ *       409:
+ *         description: CPF ou e-mail já cadastrado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ConflictError'
+ */
 clientsRouter.post("/", async (req, res) => {
   const parsed = clientSchema.safeParse(req.body);
 
