@@ -7,7 +7,13 @@ export const clientSchema = z.object({
     .string()
     .trim()
     .min(1, "Nome completo é obrigatório")
-    .refine((v) => v.trim().split(/\s+/).length >= 2, "Informe o nome completo"),
+    .refine(
+      (v) => {
+        const words = v.trim().split(/\s+/).filter(Boolean);
+        return words.length >= 2 && words.every((w) => w.length >= 2);
+      },
+      "Informe nome e sobrenome completos"
+    ),
 
   cpf: z
     .string()
