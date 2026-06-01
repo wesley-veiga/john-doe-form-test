@@ -13,7 +13,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "clients": "docker compose exec postgres psql -U postgres -d johndoe -c `SELECT * FROM clients; `"
+    "clients": "docker compose exec postgres psql -U postgres -d johndoe -c 'SELECT * FROM clients;'"
   },
   "devDependencies": {
     "turbo": "^2.9.16"
