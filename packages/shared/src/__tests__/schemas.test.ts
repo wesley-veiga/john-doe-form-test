@@ -24,6 +24,16 @@ describe("clientSchema", () => {
     expect(result.success).toBe(false);
   });
 
+  it("rejeita nome com palavra de um único caractere", () => {
+    const result = clientSchema.safeParse({ ...validClient, fullName: "João A Silva" });
+    expect(result.success).toBe(false);
+  });
+
+  it("aceita nome com três ou mais palavras todas válidas", () => {
+    const result = clientSchema.safeParse({ ...validClient, fullName: "João da Silva" });
+    expect(result.success).toBe(true);
+  });
+
   it("rejeita CPF inválido", () => {
     const result = clientSchema.safeParse({ ...validClient, cpf: "000.000.000-00" });
     expect(result.success).toBe(false);
