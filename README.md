@@ -11,6 +11,24 @@ Desafio técnico Eteg (vaga Full Stack Pleno). Formulário de cadastro de client
 - **Banco:** PostgreSQL + node-pg-migrate (migrations SQL)
 - **Testes:** Vitest
 
+Print: Mobile  
+
+<img width="1438" height="1105" alt="Screenshot 2026-06-01 at 10 07 43" src="https://github.com/user-attachments/assets/5d150dfe-8e2e-41d8-98a9-4fb89efce884" />
+
+Print: Tablet / horizontal
+
+<img width="1438" height="1105" alt="Screenshot 2026-06-01 at 10 09 15" src="https://github.com/user-attachments/assets/531f6b1a-a49d-4c99-a168-024dfab6422c" />
+
+Print: Web / Responsivo
+
+<img width="1782" height="1105" alt="Screenshot 2026-06-01 at 10 07 18" src="https://github.com/user-attachments/assets/0fde60d6-795c-4b76-b283-00f8e9da3ecf" />
+
+Print: Modal de Sucesso
+
+<img width="1438" height="1105" alt="Screenshot 2026-06-01 at 10 12 05" src="https://github.com/user-attachments/assets/c8aa9bc8-850e-4c70-826f-b116ab7c0ac7" />
+
+
+
 ---
 
 ## Rodando com Docker
