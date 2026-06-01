@@ -1,5 +1,9 @@
 import swaggerJsdoc from "swagger-jsdoc";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 import { RAINBOW_COLORS } from "shared";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const options: swaggerJsdoc.Options = {
   definition: {
@@ -80,7 +84,7 @@ const options: swaggerJsdoc.Options = {
       },
     },
   },
-  apis: ["./src/routes/*.ts"],
+  apis: [join(__dirname, "routes/*.ts"), join(__dirname, "routes/*.js")],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);
